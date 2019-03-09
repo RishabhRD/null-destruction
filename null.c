@@ -8,8 +8,9 @@ int simple_init(void){
         loop:
 	pnt = (char*) count;
 	*pnt = 'f';
+	BUG();
 	count++;
-	if(count==10) goto loop;
+	if(count!=10) goto loop;
 	return 0;
 }
 void simple_exit(void){
